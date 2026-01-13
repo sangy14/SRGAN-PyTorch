@@ -22,7 +22,7 @@ from natsort import natsorted
 from torch import Tensor
 from torch.utils.data import Dataset, DataLoader
 
-from imgproc import image_to_tensor, image_resize
+from .imgproc import image_to_tensor, image_resize
 
 __all__ = [
     "BaseImageDataset", "PairedImageDataset",

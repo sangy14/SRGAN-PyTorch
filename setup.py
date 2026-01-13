@@ -1,5 +1,5 @@
 from pathlib import Path
-from setuptools import setup
+from setuptools import setup, find_packages
 
 HERE = Path(__file__).resolve().parent
 README = (HERE / "README.md").read_text(encoding="utf-8") if (HERE / "README.md").exists() else ""
@@ -23,21 +23,8 @@ setup(
     long_description_content_type="text/markdown",
     author="sangy14",
     license="MIT",
-    # This project exposes a number of top-level Python modules (dataset.py, model.py, etc).
-    # We install them as top-level modules so downstream projects can import them directly
-    # (e.g. `import model`). If you'd prefer a true package namespace (import srgan_pytorch),
-    # we can restructure into a package directory and update this file.
-    py_modules=[
-        "dataset",
-        "image_quality_assessment",
-        "imgproc",
-        "inference",
-        "model",
-        "test",
-        "train_gan",
-        "train_net",
-        "utils",
-    ],
+    # Automatically find the package (assuming the source has been refactored into a directory)
+    packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
     python_requires=">=3.8",

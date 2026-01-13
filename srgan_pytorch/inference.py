@@ -18,9 +18,9 @@ import cv2
 import torch
 from torch import nn
 
-import model
-from imgproc import preprocess_one_image, tensor_to_image
-from utils import load_pretrained_state_dict
+from . import model
+from .imgproc import preprocess_one_image, tensor_to_image
+from .utils import load_pretrained_state_dict
 
 
 def main(args):
