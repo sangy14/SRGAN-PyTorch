@@ -16,7 +16,7 @@ if req_file.exists():
 
 
 setup(
-    name="srgan-pytorch",
+    name="srgan_pytorch",
     version="0.1.0",
     description="SRGAN implementation in PyTorch (repository package)",
     long_description=README,
